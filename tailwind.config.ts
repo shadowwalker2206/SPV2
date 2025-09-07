@@ -19,6 +19,15 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        
+        // Birthday celebration colors
+        celebration: {
+          primary: "hsl(var(--primary))",
+          glow: "hsl(var(--primary-glow))",
+          soft: "hsl(var(--primary-soft))",
+          gold: "hsl(var(--accent-gold))",
+          warm: "hsl(var(--accent-warm))",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -57,6 +66,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      fontFamily: {
+        'dancing': ['Dancing Script', 'cursive'],
+        'pacifico': ['Pacifico', 'cursive'],
+        'poppins': ['Poppins', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
