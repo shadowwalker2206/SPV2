@@ -1,24 +1,29 @@
 import { useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import memory1 from "@/assets/memory1.jpg";
-import memory2 from "@/assets/memory2.jpg";
-import memory3 from "@/assets/memory3.jpg";
-import memory4 from "@/assets/memory4.jpg";
+import memory1 from "/public/SOLO.jpg";
+import memory2 from "/public/Snapchat-448112528.jpg";
+import memory3 from "/public/Snapchat-876517789.jpg";
+import memory4 from "/public/Snapchat-1031114895~2.jpg";
+import memory5 from "/public/Snapchat-1372350616.jpg";
+import memory6 from "/public/Snapchat-1447208194.jpg";
+import memory7 from "/public/Snapchat-1704327385.jpg";
+import memory8 from "/public/Snapchat-1922872982.jpg";
+import { Caption } from "react-day-picker";
 
 const PhotoGallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   
   // Beautiful memories together
   const photos = [
-    { src: memory1, alt: "Memory 1", caption: "Laughing together - pure joy!" },
-    { src: memory2, alt: "Memory 2", caption: "Golden hour selfie vibes ✨" },
-    { src: memory3, alt: "Memory 3", caption: "Cafe conversations and coffee" },
-    { src: memory4, alt: "Memory 4", caption: "Adventure buddies exploring" },
-    { src: memory1, alt: "Memory 5", caption: "Making memories every day" },
-    { src: memory2, alt: "Memory 6", caption: "Friendship goals achieved" },
-    { src: memory3, alt: "Memory 7", caption: "Happy times captured" },
-    { src: memory4, alt: "Memory 8", caption: "Forever friends forever" },
+    { src: memory2, alt: "Memory 1", caption: "Memory 1"},
+    { src: memory1, alt: "Memory 2", caption: "Memory 2"},
+    { src: memory3, alt: "Memory 3", caption: "Memory 3"},
+    { src: memory4, alt: "Memory 4", caption: "Memory 4"},
+    { src: memory5, alt: "Memory 5", caption: "Memory 5"},
+    { src: memory6, alt: "Memory 6", caption: "Memory 6"},
+    { src: memory7, alt: "Memory 7", caption: "Memory 7"},
+    { src: memory8, alt: "Memory 8", caption: "Memory 8"},
   ];
 
   const openModal = (index: number) => {
@@ -69,14 +74,15 @@ const PhotoGallery = () => {
         {photos.map((photo, index) => (
           <div
             key={index}
-            className="celebration-card cursor-pointer group overflow-hidden aspect-square"
+            //className="celebration-card cursor-pointer group overflow-hidden aspect-square"
+            className="celebration-card cursor-pointer group overflow-hidden aspect-[4/3]"
             onClick={() => openModal(index)}
           >
             <div className="relative w-full h-full">
               <img
                 src={photo.src}
                 alt={photo.alt}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+               className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-4 left-4 text-white">
@@ -128,7 +134,8 @@ const PhotoGallery = () => {
             <img
               src={photos[selectedImage].src}
               alt={photos[selectedImage].alt}
-              className="w-full h-full object-contain rounded-3xl"
+              className="max-h-screen max-w-screen object-contain mx-auto rounded-3xl"
+
               onClick={(e) => e.stopPropagation()}
             />
 

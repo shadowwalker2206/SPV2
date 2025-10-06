@@ -13,11 +13,11 @@ const MusicPlayer = () => {
 
   // Sample playlist - replace with actual audio file paths
   const playlist = [
-    { title: "Sahiba", artist: "Jasleen Royal", src: "/path/to/sahiba.mp3" },
-    { title: "Aur Mohabbat Kitni Karoon", artist: "Various Artists", src: "/path/to/mohabbat.mp3" },
-    { title: "Qyade Se", artist: "Artist Name", src: "/path/to/qyade.mp3" },
-    { title: "Tum Ho Toh", artist: "Armaan Malik", src: "/path/to/tumho.mp3" },
-    { title: "Zamaana Laage", artist: "Various Artists", src: "/path/to/zamaana.mp3" },
+    { title: "Sahiba", artist: "Jasleen Royal", src: "/music/Sahiba.mp3" },
+    { title: "Aur Mohabbat Kitni Karoon", artist: "Various Artists", src: "/music/MetroIn Dino_ Aur Mohabbat Kitni Karoon.mp3" },
+    { title: "Qyade Se", artist: "Artist Name", src: "/music/qyade se.mp3" },
+    { title: "Tum Ho Toh", artist: "Armaan Malik", src: "/music/tum ho toh.mp3" },
+    { title: "Zamaana Laage", artist: "Various Artists", src: "/music/zamaana lage.mp3" },
   ];
 
   useEffect(() => {
@@ -35,6 +35,15 @@ const MusicPlayer = () => {
       audio.removeEventListener('loadedmetadata', updateDuration);
     };
   }, [currentSong]);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (isPlaying) {
+      audio.play().catch(err => console.log('Playback failed:', err));
+    }
+  }, [currentSong, isPlaying]);
 
   useEffect(() => {
     if (audioRef.current) {
