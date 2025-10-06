@@ -7,48 +7,48 @@ const VideoGallery = () => {
 
   const videos = [
     { 
-      src: "/public/hellorotated.mp4", 
+      src: "/hellorotated.mp4", 
       
       title: "Hello Guyz",
       thumbnail: "/thumbnails/thumbnail1.jpg",
       description: "" 
     },
     { 
-      src: "/public/mockdrillrotated.mp4", 
+      src: "/mockdrillrotated.mp4", 
       thumbnail: "/thumbnails/thumbnail2.jpg", 
       title: "Memory Lane",
       description: "Mock drill" 
     },
     { 
-      src: "/public/netwalkeod.mp4", 
+      src: "/netwalkeod.mp4", 
       thumbnail: "/thumbnails/thumbnail3.jpg", 
       title: "Khatron ke khiladi",
       description: "Being goofy together" 
     },
     { 
-      src: "/public/tyreeod.mp4", 
+      src: "/tyreeod.mp4", 
       thumbnail: "/thumbnails/thumbnail4.jpg", 
       title: "Adventure Video",
       description: "Our mini adventure" 
     },
      { 
-      src: "/public/ramen.mp4", 
+      src: "/ramen.mp4", 
       thumbnail: "/thumbnails/thumbnail5.jpg", 
       title: "Laugh out loud",
       description: "Hasi rukni nhi chahiye" 
     },
     { 
-      src: "/public/maksad.mp4", 
+      src: "/maksad.mp4", 
       thumbnail: "/thumbnails/thumbnail6.jpg", 
       title: "Maksad"
     },
     { 
-      src: "/public/tuchahiyefinal.mp4", 
+      src: "/tuchahiyefinal.mp4", 
       thumbnail: "/thumbnails/thumbnail7.jpg", 
       title: "Wholesome moments"
     },
      { 
-      src: "/public/hercore.mp4", 
+      src: "/hercore.mp4", 
       thumbnail: "/thumbnails/thumbnail8.jpg", 
       title: "BACCHI FOR A REASON"
     },
